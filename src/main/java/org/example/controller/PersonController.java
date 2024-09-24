@@ -18,7 +18,7 @@ public class PersonController {
     }
 
     @GetMapping("/persons/by-city")
-    public List<Person> getPersonsByCity(@RequestParam String city) {
+    public List<Person> getPersonsByCity(@RequestParam("city_of_living") String city) {
         return personRepository.getPersonsByCity(city);
     }
 }
